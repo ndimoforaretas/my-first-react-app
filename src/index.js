@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/*
+Steps to get react to show content on the screen
+*/
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// 1) Import the React and ReactDOM libraries
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import React from "react";
+import ReactDOM from "react-dom";
+
+// 2) Create a react component
+
+const App = function () {
+	return <div>Hi there!</div>;
+};
+
+// 3) Take the react component and show it on the screen
+ReactDOM.render(<App />, document.querySelector("#root"));
