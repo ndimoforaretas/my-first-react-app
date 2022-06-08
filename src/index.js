@@ -7,10 +7,26 @@ Steps to get react to show content on the screen
 import React from "react";
 import ReactDOM from "react-dom";
 
+// function getButtonText() {
+// 	return "Click on Me!";
+// }
 // 2) Create a react component
 
 const App = function () {
-	return <div>Hi there!</div>;
+	const buttonText = { text: "Click Me!" };
+	const labelText = "Enter name:";
+
+	return (
+		<div>
+			<label className="label" for="name">
+				{labelText}
+			</label>
+			<input id="name" type="text" />
+			<button style={{ backgroundColor: "blue", color: "white" }}>
+				{buttonText.text}
+			</button>
+		</div>
+	);
 };
 
 // 3) Take the react component and show it on the screen
